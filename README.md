@@ -12,6 +12,6 @@ And depending on how much JSON data you need to process.
 you have two options: write all the JSON parsing code manually. automate the process with code generation.
 
 
-< img src ="https://github.com/user-attachments/assets/bfe01027-e49c-4b3c-b064-e01c6ffbe4f9" height =25% width=25%>
+<img src ="https://github.com/user-attachments/assets/bfe01027-e49c-4b3c-b064-e01c6ffbe4f9" height =25% width=25%>
 
 https://github.com/user-attachments/assets/95d2a9d2-cc22-44f6-8c63-a751e7418b5e
