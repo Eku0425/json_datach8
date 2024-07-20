@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:json_datach8/User_info/provider/UserProvider.dart';
+import 'package:json_datach8/User_info/view/User_page.dart';
 
 import 'package:provider/provider.dart';
 
@@ -18,12 +20,16 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => HomeProvider(),
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UserProvider(),
+        ),
       ],
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: {
-          '/': (context) => HomePage(),
+          '/': (context) => UserPage(),
+          '/home': (context) => HomePage(),
         },
       ),
     );
