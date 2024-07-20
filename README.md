@@ -22,3 +22,18 @@ https://github.com/user-attachments/assets/95d2a9d2-cc22-44f6-8c63-a751e7418b5e
 
 https://github.com/user-attachments/assets/c74bd6f2-77ff-4f9a-b6a9-68bbb26b95bd
 
+#  What is JSON & JSON Parsing ?
+What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a lightweight format for storing and transporting data
+JSON is often used when data is sent from a server to a web page
+JSON is "self-describing" and easy to understand
+Example :
+{
+"employees": [
+    {"firstName":"John", "lastName":"Doe"},
+    {"firstName":"Anna", "lastName":"Smith"},
+    {"firstName":"Peter", "lastName":"Jones"}
+  ]
+}
+
