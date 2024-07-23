@@ -38,3 +38,22 @@ JSON is "self-describing" and easy to understand.
   ]
 }
 
+# post data 
+When dealing with JSON data that contains nested lists, you need to iterate over the lists to access the values. Flutter provides the jsonDecode function to convert the JSON string into a map or list, which you can then traverse.
+
+# Example
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe"
+    }
+  ]
+}
+<img src="https://github.com/user-attachments/assets/bc357807-2f6b-4651-8dab-029a34432c79" height =25% width=25%>
+
+
