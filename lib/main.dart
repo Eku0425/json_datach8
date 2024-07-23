@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:json_datach8/User_info/provider/UserProvider.dart';
-import 'package:json_datach8/User_info/view/User_page.dart';
+import 'package:json_datach8/post_data/provider/Post_Provider.dart';
+import 'package:json_datach8/routes/routes.dart';
 
 import 'package:provider/provider.dart';
 
+import 'User_info/provider/UserProvider.dart';
 import 'json_parsing/provider/home_provider.dart';
-import 'json_parsing/view/home_page.dart';
 
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MultiProvider(
+  runApp(
+    MultiProvider(
       providers: [
         ChangeNotifierProvider(
           create: (context) => HomeProvider(),
@@ -24,14 +17,24 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => UserProvider(),
         ),
+        ChangeNotifierProvider(
+          create: (context) => PostsProvider(),
+        ),
       ],
-      builder: (context, child) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        routes: {
-          '/': (context) => UserPage(),
-          '/home': (context) => HomePage(),
-        },
-      ),
+      builder: (context, child) => const MyApp(),
+    ),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.light(),
+      debugShowCheckedModeBanner: false,
+      routes: MyRoutes.myRoutes,
     );
   }
 }
